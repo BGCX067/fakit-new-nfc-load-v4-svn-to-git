@@ -1,0 +1,51 @@
+
+#include "SystemConfigDefineForFlash.h"
+#include "FA_MainSystemConfigDefineVarsForFlash.h"
+
+////////////////////////////////////////////////////////////
+//  FA Tool System Information
+////////////////////////////////////////////////////////////
+#if defined(_Erase_Infor_Flash_While_Download_Prg_)
+            ORG     Flash_segment_C  ;#define Flash_segment_C   0x1880
+
+            ; FA Information
+            DB _FA_VERSION_             ; 1 bytes//for main function addition and EEPROM Format changing
+            DB _FA_MINOR_VERSION_       ; 1 bytes//only for minor functions changing
+            DB _FA_EEPROM_VERSION_      ; 1 bytes //only for EEPROM values changing
+            DB _FA_RESERVED_VERSION_    ; 1 bytes //0x00: Protuction, 0x01: Samples
+
+            DW  _FA_Serial_Num_    		;FA serial NUM ; 2bytes
+            DW  _FA_Serial_Num_Extend_  ;FA serial NUM Extend_; 2bytes
+            DW  _FA_Manufacture_Date_	;FA Manufacture Date ; 2bytes
+
+            DF  _FA_24V_mV_To_ADC_Factor_	;_FA_24V_mV_To_ADC_Factor_ ; 4bytes
+            DF  _FA_36V_mV_To_ADC_Factor_	;_FA_36V_mV_To_ADC_Factor_ ; 4bytes
+            DF  _FA_48V_mV_To_ADC_Factor_	;_FA_48V_mV_To_ADC_Factor_ ; 4bytes
+
+            DB  _FA_24V_CAL_OFFSET_ADC_     ; 1bytes
+            DB  _FA_36V_CAL_OFFSET_ADC_     ; 1bytes
+            DB  _FA_48V_CAL_OFFSET_ADC_     ; 1bytes
+            DB  _FA_Pack_DSG_CAL_OFFSET_ADC_  ; 1bytes
+            DB  _FA_Pack_CHG_CAL_OFFSET_ADC_    ; 1bytes
+            DB  _Reserved_1_Byte_    ; 1bytes
+
+            DF  _FA_Pack_DSG_mV_To_ADC_Factor_	; ; 4bytes
+
+            DB  _FA_HW_Version_                 ; 1bytes
+            DB  _FA_HW_MINOR_Version_           ; 1bytes
+            DW  _FA_HW_FUNCTION1_BIT_	        ; 2bytes
+            DW  _FA_HW_FUNCTION2_BIT_	        ; 2bytes
+            DW  _FA_HW_FUNCTION3_BIT_	        ; 2bytes
+
+            DF  _FA_Pack_CHG_mV_To_ADC_Factor_	; ; 4bytes
+
+            DB  _Normal_Auto_Charger_Check_Delay_Cycle_         ; 1bytes
+            DB  _Faster_Auto_Charger_Check_Delay_Cycle_         ; 1bytes
+
+            DB  _FA_CHG_Current_CAL_OFFSET_ADC_    ; 1bytes
+            DB  _FA_DSG_Current_CAL_OFFSET_ADC_    ; 1bytes
+            DF  _FA_CHG_Current_mA_To_ADC_Factor_	; ; 4bytes
+            DF  _FA_DSG_Current_mA_To_ADC_Factor_	; ; 4bytes
+
+#endif
+            END

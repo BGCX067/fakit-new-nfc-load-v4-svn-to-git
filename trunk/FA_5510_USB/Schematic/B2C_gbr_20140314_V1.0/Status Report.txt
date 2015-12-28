@@ -1,0 +1,33 @@
+CAM Outputs Generation Report
+for 'CAM Outputs for B2C_V1.0.cam'
+at 11:12:40 on 14-Mar-2014
+
+
+'Pick Place Output 1'
+'Pick Place for B2C_V1.txt' generated
+
+'NC Drill Output 1'
+'B2C_V1.TXT' generated
+'B2C_V1.DRL' generated
+'B2C_V1.DRR' generated
+
+'Gerber Output 1'
+'B2C_V1.GTL' generated
+'B2C_V1.GBL' generated
+'B2C_V1.GTO' generated
+'B2C_V1.GBO' generated
+'B2C_V1.GTP' generated
+'B2C_V1.GBP' generated
+'B2C_V1.GTS' generated
+'B2C_V1.GBS' generated
+'B2C_V1.GKO' generated
+'B2C_V1.GM1' generated
+'B2C_V1.GM2' generated
+'B2C_V1.GPT' generated
+'B2C_V1.GPB' generated
+'B2C_V1.GD1' generated
+'B2C_V1.GG1' generated
+'B2C_V1.REP' generated
+
+
+Total number of generated files = 20
